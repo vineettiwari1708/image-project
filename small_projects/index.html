@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MaskIt - Image Masking Tool</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <div class="container">
+    <h2>MaskIt – Image Masking Tool</h2>
+
+    <label>
+      Canvas Width (px):
+      <input type="number" id="canvasWidth" value="400" min="50" max="2000">
+    </label>
+
+    <label>
+      Canvas Height (px):
+      <input type="number" id="canvasHeight" value="400" min="50" max="2000">
+    </label>
+
+    <label>
+      Image 1 (Shape Mask - Transparent PNG):
+      <input type="file" id="maskInput" accept="image/png">
+    </label>
+
+    <label>
+      Image 2 (Content Image):
+      <input type="file" id="imageInput" accept="image/*">
+    </label>
+
+    <canvas id="canvas" width="400" height="400"></canvas>
+
+    <a id="downloadBtn" class="button hidden" download="masked-image.png">Download Masked Image</a>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
