@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Advanced Crop Tool</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Advanced Crop Tool</h1>
+
+  <input type="file" id="imageInput" accept="image/*" />
+  
+  <div class="controls">
+    <label>
+      Brightness (0–200%):
+      <input type="range" id="brightness" min="0" max="200" value="100" />
+    </label>
+    <label>
+      Contrast (0–200%):
+      <input type="range" id="contrast" min="0" max="200" value="100" />
+    </label>
+    <label>
+      Rotation (0–360°):
+      <input type="range" id="rotation" min="0" max="360" value="0" />
+    </label>
+  </div>
+
+  <div class="crop-section">
+    <button id="cropBtn" disabled>Crop</button>
+    <button id="resetCropBtn" disabled>Reset Crop</button>
+    <span id="cropSize">Crop Size: 0 x 0</span>
+  </div>
+
+  <canvas id="canvas"></canvas>
+
+  <script src="script.js"></script>
+</body>
+</html>

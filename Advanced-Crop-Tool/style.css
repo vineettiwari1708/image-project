@@ -1,0 +1,58 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background: #f5f5f5;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+.controls {
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.controls label {
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.controls input[type="range"] {
+  margin-top: 5px;
+}
+
+.crop-section {
+  margin-bottom: 15px;
+}
+
+button {
+  font-size: 16px;
+  padding: 8px 16px;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+#cropSize {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+canvas {
+  border: 2px solid #ccc;
+  max-width: 100%;
+  cursor: crosshair;
+  background: white;
+  user-select: none;
+}
