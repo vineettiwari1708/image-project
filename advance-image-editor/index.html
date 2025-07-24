@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Advanced Image Editor</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>Advanced Image Editor</h1>
+
+  <div id="upload-container">
+    <input type="file" id="upload" accept="image/*" />
+  </div>
+
+  <div id="tabs">
+    <div class="tab active" data-tab="brightnessContrast">Brightness & Contrast</div>
+    <div class="tab" data-tab="rotation">Rotation</div>
+    <div class="tab" data-tab="crop">Crop Tool</div>
+  </div>
+
+  <div class="tab-content">
+    <div id="brightnessContrast" class="active">
+      <label>Brightness: <span id="brightnessVal">100</span>%</label>
+      <input type="range" id="brightness" min="0" max="200" value="100" />
+      <br />
+      <label>Contrast: <span id="contrastVal">100</span>%</label>
+      <input type="range" id="contrast" min="0" max="200" value="100" />
+      <br />
+      <button id="resetBC">Reset Brightness/Contrast</button>
+    </div>
+
+    <div id="rotation">
+      <label>Rotation: <span id="rotationVal">0</span>°</label>
+      <input type="range" id="rotationRange" min="0" max="360" value="0" />
+      <br />
+      <button id="resetRotation">Reset Rotation</button>
+    </div>
+
+    <div id="crop">
+      <div id="cropSize">Crop Size: 0 x 0</div>
+      <button id="cropBtn" disabled>Crop</button>
+      <button id="resetCrop" disabled>Reset Crop</button>
+    </div>
+  </div>
+
+  <canvas id="canvas"></canvas>
+  <button id="downloadBtn" disabled>Download Image</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
