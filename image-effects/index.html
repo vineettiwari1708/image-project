@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>🖼️ Image Effects Viewer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>🖌️ Image Effects Viewer</h1>
+
+  <div class="controls">
+    <input type="file" id="upload" accept="image/*">
+
+    <select id="filterSelect">
+      <option value="none">None</option>
+      <option value="grayscale">Grayscale</option>
+      <option value="sepia">Sepia</option>
+      <option value="invert">Invert</option>
+      <option value="brightness">Brightness (+20%)</option>
+      <option value="contrast">Contrast (+20%)</option>
+    </select>
+    
+
+    <button onclick="applyEffect()">Apply Effect</button>
+    <button onclick="resetImage()">Reset</button>
+    <button onclick="downloadImage()">Download</button>
+  </div>
+
+  <canvas id="canvas"></canvas>
+
+  <script src="script.js"></script>
+</body>
+</html>
