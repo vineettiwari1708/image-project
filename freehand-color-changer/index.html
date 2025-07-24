@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Freehand Image Color Changer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>🎨 Freehand Image Color Changer</h1>
+
+  <div class="controls">
+    <input type="file" id="upload" accept="image/*">
+    
+    <label>
+      🎯 Color:
+      <input type="color" id="colorPicker" value="#ff0000">
+    </label>
+
+    <label>
+      🖌️ Brush Size:
+      <input type="range" id="brushSize" min="1" max="20" value="3">
+    </label>
+
+    <div class="buttons">
+      <button onclick="applyColor()">✅ Apply</button>
+      <button onclick="undo()">↩️ Undo</button>
+      <button onclick="clearSelection()">🧹 Clear</button>
+      <button onclick="downloadImage()">⬇️ Download</button>
+    </div>
+  </div>
+
+  <canvas id="canvas"></canvas>
+
+  <script src="script.js"></script>
+</body>
+</html>
